@@ -1,16 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Navigate } from 'react-router-dom';
+import TopUsers from './components/ToppUsers';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      
-    </>
-  )
-}
+    <Routes>
+      <Route path="/" element={<Navigate to="/topusers" />} />
+      <Route path="/topusers" element={<TopUsers />} />
+    </Routes>
+  );
+};
 
-export default App
+export default App;
